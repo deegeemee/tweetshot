@@ -13,12 +13,11 @@ npm install @deegeemee/tweetshot
 ```ts
 import { tweetShot } from '@deegeemee/tweetshot';
 
-const tweetUrl = 'https://twitter.com/deegeemee/status/1682087529612360704';
+const tweetUrl = 'https://x.com/deegeemeeonx/status/1772271871909581245';
 
-tweetShot({ tweetUrl })
-  .then((buffer) => {
-    // Buffer is a Buffer
-  ]);
+tweetShot({ tweetUrl }).then((buffer) => {
+  // Buffer is a Buffer
+});
 ```
 
 Or if you want to save the screenshot to a file:
@@ -26,12 +25,11 @@ Or if you want to save the screenshot to a file:
 ```ts
 import { tweetShot } from '@deegeemee/tweetshot';
 
-const tweetUrl = 'https://twitter.com/deegeemee/status/1682087529612360704';
+const tweetUrl = 'https://x.com/deegeemeeonx/status/1772271871909581245';
 
-tweetShot({ tweetUrl, outFile: '/path/to/output.webp' });
-  .then((output) => {
-    // output is a sharp.OutputInfo
-  });
+tweetShot({ tweetUrl, outFile: 'output.webp' }).then((output) => {
+  // output is a sharp.OutputInfo
+});
 ```
 
 ## API
