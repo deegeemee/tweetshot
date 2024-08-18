@@ -1,0 +1,43 @@
+{
+  "version": "0.0.1",
+  "type": "module",
+  "name": "@deegeemee/tweetshot",
+  "author": "deegeemee",
+  "license": "MIT",
+  "description": "A Node.js library to take screenshots of tweets",
+  "homepage": "https://github.com/deegeemee/tweetshot#readme",
+  "bugs": {
+    "url": "https://github.com/deegeemee/tweetshot/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deegeemee/tweetshot.git"
+  },
+  "keywords": [
+    "tweet",
+    "twitter",
+    "screenshot"
+  ],
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "test": "node --import tsx --test test/*.test.ts",
+    "test:watch": "nodemon -w src -w test -e ts -x 'npm run test'",
+    "lint": "tsc"
+  },
+  "dependencies": {
+    "puppeteer-core": "^23.1.0",
+    "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.7",
+    "@types/node": "^22.4.0",
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.3",
+    "tsup": "^8.2.4",
+    "tsx": "^4.17.0",
+    "typescript": "^5.5.4"
+  }
+}
